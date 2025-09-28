@@ -38,8 +38,8 @@ This library provides tools for efficient conversion and reading of large image 
 1. Ensure Python 3 is installed on your system.
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo/dataloader_bachelor_project.git
-   cd dataloader_bachelor_project
+   git clone https://github.com/helmholtz-analytics/hpc_pytorch_loader.git
+   cd hpc_pytorch_loader
    ```
 3. Run the setup script:
    ```bash
