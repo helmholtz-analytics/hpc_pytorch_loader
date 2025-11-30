@@ -59,7 +59,7 @@ def main():
                 "input_data": caltech256_path,
                 "output_path": output_path,
                 "images_per_file": args.img_per_file,
-                "batch_size": args,
+                "batch_size": args.batch_size,
                 "num_workers": args.num_workers,
                 "dist": False
             }
