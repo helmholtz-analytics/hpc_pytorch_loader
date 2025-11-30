@@ -55,7 +55,7 @@ def main():
     dist.init_process_group('nccl',world_size=world_size, rank=rank)
 
 
-    imagenet1k_path = args.path
+    imagenet1k_path = args.input_path
 
     output_path = args.output_dir
     if rank == 0:
