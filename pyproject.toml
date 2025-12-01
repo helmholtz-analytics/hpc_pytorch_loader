@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hpc_pytorch_loader"
+version = "0.1.0"
+authors = [
+    {name = "Ahmed Hmouda", email = "ahmedhmouda@gmail.com"},
+]
+description = "Tools for efficient conversion and reading of large image datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}  # Add your license
+keywords = ["pytorch", "dataloader", "hpc", "datasets", "machine-learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "tqdm",
+    "requests",
+    "pyarrow",
+    "h5py",
+    "pillow",
+    "nvidia-ml-py3",
+    "pandas",
+]
+
+
+[tool.setuptools.packages.find]
+exclude = ["examples", "tests", "tests.*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.json", "*.yaml", "*.yml"]  # Include non-Python files
