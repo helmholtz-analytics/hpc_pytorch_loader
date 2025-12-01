@@ -1,4 +1,4 @@
-from utils.custom_sampler import CustomDistributedSampler
+from hpc_pytorch_loader.utils.custom_sampler import CustomDistributedSampler
 from torchvision.datasets import ImageFolder
 import io
 

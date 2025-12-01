@@ -2,7 +2,7 @@ import os
 import h5py
 import numpy as np
 from PIL import Image
-from utils.reader_utils import Reader
+from hpc_pytorch_loader.utils.reader_utils import Reader
 
 class Hdf5Reader(Reader):
     """

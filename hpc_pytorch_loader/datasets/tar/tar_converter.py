@@ -2,8 +2,8 @@ import os
 import json
 import tarfile
 import io
-from utils.converter_utils import ConverterFlexibleSize
-from utils.utils import image_to_binary, distributedConverter
+from hpc_pytorch_loader.utils.converter_utils import ConverterFlexibleSize
+from hpc_pytorch_loader.utils.utils import image_to_binary, distributedConverter
 
 @distributedConverter
 class TarConverter(ConverterFlexibleSize):

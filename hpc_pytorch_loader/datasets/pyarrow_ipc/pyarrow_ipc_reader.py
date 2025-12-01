@@ -3,7 +3,7 @@ from PIL import Image
 from tqdm import tqdm
 import pyarrow as pa
 import io
-from utils.reader_utils import Reader
+from hpc_pytorch_loader.utils.reader_utils import Reader
 
 class IpcReader(Reader):
     """

@@ -4,7 +4,7 @@ import json
 from tqdm import tqdm
 import tarfile
 import io
-from utils.reader_utils import Reader
+from hpc_pytorch_loader.utils.reader_utils import Reader
 from PIL import  UnidentifiedImageError
 
 class TarReader(Reader):

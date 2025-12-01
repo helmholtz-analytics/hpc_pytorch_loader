@@ -2,8 +2,8 @@ import os
 import numpy as np
 import h5py
 
-from utils.utils import get_number_of_channels, distributedConverter
-from utils.converter_utils import ConverterFixedSize
+from hpc_pytorch_loader.utils.utils import get_number_of_channels, distributedConverter
+from hpc_pytorch_loader.utils.converter_utils import ConverterFixedSize
 
 
 @distributedConverter

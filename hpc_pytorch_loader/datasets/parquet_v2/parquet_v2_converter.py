@@ -1,8 +1,8 @@
 import os
 import pyarrow as pa
 import pyarrow.parquet as pq
-from utils.utils import image_to_binary, distributedConverter
-from utils.converter_utils import ConverterFlexibleSize
+from hpc_pytorch_loader.utils.utils import image_to_binary, distributedConverter
+from hpc_pytorch_loader.utils.converter_utils import ConverterFlexibleSize
 
 
 @distributedConverter

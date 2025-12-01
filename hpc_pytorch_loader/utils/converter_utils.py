@@ -4,7 +4,7 @@ import os
 from torchvision.transforms import Compose
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from utils.utils import check_input_type, ResizeAndConvert
+from hpc_pytorch_loader.utils.utils import check_input_type, ResizeAndConvert
 
 class Converter(ABC):
     """
