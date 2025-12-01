@@ -180,3 +180,6 @@ pyrightconfig.json
 benchmark_results*
 error_*
 output_*
+*.egg-info/
+*.egg
+
