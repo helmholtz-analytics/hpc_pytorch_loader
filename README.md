@@ -97,7 +97,7 @@ However, when using a FixedSizeConverter (e.g., MemmapConverter, HDF5Converter),
 In this case, it is mandatory to apply the provided ResizeAndConvert transformation:
 
 ```python
-from utils.utils import ResizeAndConvert
+from hpc_pytorch_loader.utils.utils import ResizeAndConvert
 
 transform = ResizeAndConvert(size=(224, 224), mode="RGB")
 ```
@@ -108,7 +108,7 @@ This guarantees that the dataset is compatible with fixed-size storage formats.
 #### Example: Using `MemmapConverter`
 
 ```python
-from datasets.memmap.memmap_converter import MemmapConverter
+from  hpc_pytorch_loader.datasets.memmap.memmap_converter import MemmapConverter
 
 # Initialize the converter
 converter = MemmapConverter(
@@ -131,8 +131,8 @@ converter.convert()
 #### Example: Using a Torch Dataset
 
 ```python
-from datasets.memmap.memmap_converter import MemmapConverter
-from utils.utils import ResizeAndConvert
+from  hpc_pytorch_loader.datasets.memmap.memmap_converter import MemmapConverter
+from  hpc_pytorch_loader.utils.utils import ResizeAndConvert
 from torchvision.datasets import MNIST
 
 # Prepare the dataset
@@ -164,7 +164,7 @@ converter.convert()
 #### Example: Using `IpcConverter`
 
 ```python
-from datasets.pyarrow_ipc.pyarrow_ipc_converter import IpcConverter
+from  hpc_pytorch_loader.datasets.pyarrow_ipc.pyarrow_ipc_converter import IpcConverter
 
 # Initialize the converter
 converter = IpcConverter(
@@ -188,7 +188,7 @@ converter.convert()
 #### Example: Using `MemmapReader`
 
 ```python
-from datasets.memmap.memmap_reader import MemmapReader
+from  hpc_pytorch_loader.datasets.memmap.memmap_reader import MemmapReader
 from torch.utils.data import DataLoader
 from torchvision import transforms
 
@@ -200,7 +200,7 @@ transform = transforms.Compose([
 ])
 
 # Initialize the reader
-reader = MemmapReader(dataset_path="path/to/converted/dataset")
+reader = MemmapReader(dataset_path="path/to/converted/dataset", transform = transform)
 
 # Create a DataLoader
 dataloader = DataLoader(
