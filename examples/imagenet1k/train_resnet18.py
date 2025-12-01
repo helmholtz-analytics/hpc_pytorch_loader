@@ -8,10 +8,10 @@ from torch.utils.data import DataLoader
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torchvision.models import resnet18
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..','..')))
+#sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..','..')))
 
 from torchvision.transforms import Compose, RandomResizedCrop, RandomHorizontalFlip, ToTensor, Normalize
-from datasets.memmap.memmap_reader import MemmapReader
+from hpc_pytorch_loader.datasets.memmap.memmap_reader import MemmapReader
 
 def train(rank, world_size, args):
     # Initialize distributed process group if in distributed mode

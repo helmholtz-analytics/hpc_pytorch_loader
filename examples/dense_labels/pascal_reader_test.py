@@ -8,8 +8,6 @@ import argparse
 import os
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..','..')))
-
 
 from dense_pyarrow_ipc.dense_pyarrow_ipc_reader import DenseIpcReader
 from dense_memmap.dense_memmap_reader import DenseMemmapReader

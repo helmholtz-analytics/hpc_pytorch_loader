@@ -2,13 +2,12 @@ import argparse
 import os
 
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..','..')))
 
 from dense_pyarrow_ipc.dense_pyarrow_ipc_converter import DenseIpcConverter
 from dense_memmap.dense_memmap_converter import DenseMemmapConverter
 
 from torchvision.datasets import VOCSegmentation
-from utils.utils import ResizeAndConvert
+from hpc_pytorch_loader.utils.utils import ResizeAndConvert
 
 
 
@@ -27,7 +26,7 @@ FIXED_SIZE_CONVERTERS = ["memmap","hdf5"]
 def main():
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Download and Convert Pascal dataset")
-    parser.add_argument("--input_path", type=str, default=".",
+    parser.add_argument("--input_path", type=str, default="voc",
                         help="Base directory where the data will be stored")
 
     parser.add_argument('--format', default="memmap", type=str,

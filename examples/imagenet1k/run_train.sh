@@ -23,8 +23,7 @@ export MASTER_PORT=6000
 
 # Run the training script
 srun --cpu-bind=socket python train_resnet18.py \
-    --dataset_path "path/to/converted/dataset" \
-    --output_model_path "resnet18_model.pth" \
+    --dataset_path "/p/scratch/hrfmri2/hmouda1/loader_demo/im1k_memmap" \
     --batch_size 64 \
     --num_workers 4 \
     --epochs 20 \

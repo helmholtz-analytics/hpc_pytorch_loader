@@ -1,10 +1,9 @@
 import os
 import numpy as np
 import sys
-sys.path.append(r"C:\Users\a.hmouda\Desktop\clean_code\dataloader_bachelor_project")
 
-from utils.utils import get_number_of_channels, distributedConverter
-from utils.converter_utils import ConverterFixedSize
+from hpc_pytorch_loader.utils.utils import get_number_of_channels, distributedConverter
+from hpc_pytorch_loader.utils.converter_utils import ConverterFixedSize
 
 from torch.utils.data import DataLoader
 from tqdm import tqdm

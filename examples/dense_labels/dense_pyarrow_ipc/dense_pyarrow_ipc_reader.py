@@ -5,9 +5,8 @@ import pyarrow as pa
 import io
 
 import sys
-sys.path.append(r"C:\Users\a.hmouda\Desktop\clean_code\dataloader_bachelor_project")
 
-from utils.reader_utils import Reader
+from hpc_pytorch_loader.utils.reader_utils import Reader
 
 class DenseIpcReader(Reader):
     """

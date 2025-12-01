@@ -2,10 +2,9 @@ import os
 import pyarrow as pa
 
 import sys
-sys.path.append(r"C:\Users\a.hmouda\Desktop\clean_code\dataloader_bachelor_project")
 
-from utils.converter_utils import ConverterFlexibleSize
-from utils.utils import image_to_binary, distributedConverter
+from hpc_pytorch_loader.utils.converter_utils import ConverterFlexibleSize
+from hpc_pytorch_loader.utils.utils import image_to_binary, distributedConverter
 
 @distributedConverter
 class DenseIpcConverter(ConverterFlexibleSize):

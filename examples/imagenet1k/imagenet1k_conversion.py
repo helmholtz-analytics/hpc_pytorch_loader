@@ -3,14 +3,14 @@ import os
 import sys
 import torch.distributed as dist
 
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..','..')))
+#sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..','..')))
 
 
-from datasets.parquet_v2.parquet_v2_converter import ParquetConverter as ParquetConverter_v2
-from datasets.pyarrow_ipc.pyarrow_ipc_converter import IpcConverter
-from datasets.hdf5.hdf5_converter import Hdf5Converter
-from datasets.memmap.memmap_converter import MemmapConverter
-from datasets.tar.tar_converter import TarConverter
+from hpc_pytorch_loader.datasets.parquet_v2.parquet_v2_converter import ParquetConverter as ParquetConverter_v2
+from hpc_pytorch_loader.datasets.pyarrow_ipc.pyarrow_ipc_converter import IpcConverter
+from hpc_pytorch_loader.datasets.hdf5.hdf5_converter import Hdf5Converter
+from hpc_pytorch_loader.datasets.memmap.memmap_converter import MemmapConverter
+from hpc_pytorch_loader.datasets.tar.tar_converter import TarConverter
 
 
 

@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node=12
 #SBATCH --output=output_%j.out
 #SBATCH --error=error_%j.err
-#SBATCH --time="01:59:00"
+#SBATCH --time="00:30:00"
 #SBATCH --job-name=dataloadeg
 #SBATCH --gres="gpu:1"
 #SBATCH --partition="dc-gpu-devel"
@@ -19,17 +19,18 @@ source ../../dataloadenv/bin/activate
 # so processes know who to talk to
 MASTER_ADDR="$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)"
 # Allow communication over InfiniBand cells.
-MASTER_ADDR="${{MASTER_ADDR}}i"
+MASTER_ADDR="${MASTER_ADDR}i"
 # Get IP for hostname.
 export MASTER_ADDR="$(nslookup "$MASTER_ADDR" | grep -oP '(?<=Address: ).*')"
 export MASTER_PORT=6000
 
 # Run the program
 time srun --cpu-bind=socket python imagenet1k_conversion.py \
-    --path "." \
+    --input_path "/p/scratch/hrfmri2/hmouda1/imagenet1k/train" \
     --format "memmap" \
     --img_per_file 10000 \
     --batch_size 1000 \
-    --num_worker 4
+    --num_worker 4 \
+    --output_dir "/p/scratch/hrfmri2/hmouda1/loader_demo/im1k_memmap_2"
     
 

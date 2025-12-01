@@ -3,8 +3,8 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 
-from utils.utils import get_number_of_channels
-from utils.reader_utils import Reader
+from hpc_pytorch_loader.utils.utils import get_number_of_channels
+from hpc_pytorch_loader.utils.reader_utils import Reader
 from torchvision import transforms
 to_tensor = transforms.ToTensor()
 
